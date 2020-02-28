@@ -1,0 +1,3 @@
+(A)-> Classe é um modelo criada pelo programador para representar abstratamente objetos do mundo real.
+(B)-> Objeto é uma instância da classe, onde são herdados as caracteristicas da classe que serve de molde para o objeto.
+(C)-> O encapsulamento serve para proteger e deixar mais robusto o código, assim restringino o acesso aos métodos e atributos da classe, com isso tornando o programa mais confiável.
