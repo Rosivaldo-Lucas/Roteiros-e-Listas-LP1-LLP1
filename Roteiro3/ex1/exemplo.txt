@@ -1,0 +1,24 @@
+Polimorfismo é a capacidade de um objeto assumir várias formas em diferentes constextos.
+
+Um exemplo seria uma super classe Conta e as classes ContaEspecial e ContaCorrente sendo subclasses da classe Conta,
+assim seria possível fazer com que a classe Conta adquirisse várias formas em tempo de execussão.
+
+Digamos que as classes citadas tenham sido criadas corretamente,
+então poderiamos obter o polimorfismo da seguinte forma:
+
+int main(){
+  Conta *conta[1];
+
+  // Classe ContaEspecial
+  conta[0] = new ContaEspecial();
+
+  // Classe ContaCorrente
+  conta[1] = new ContaCorrente();
+
+  conta[0]->sacar(); // Será chamado o método sacar da classe ContaEspecial
+  conta[1]->sacar(); // Será chamado o método sacar da classe ContaCorrente
+
+  // Logo a classe Conta é polimorfica.
+
+  return 0;
+}
