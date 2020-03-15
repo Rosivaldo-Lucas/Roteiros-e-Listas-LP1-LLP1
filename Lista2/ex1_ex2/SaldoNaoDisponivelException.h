@@ -3,12 +3,9 @@
 
 #include <exception>
 
-class SaldoNaoDisponivelException : public std::exception{
+class SaldoNaoDisponivelException : public std::exception {
   public:
-    void saldoException();
-  private:
-
+    SaldoNaoDisponivelException();
 };
-
 
 #endif //_SALDO_NAO_DISPONIVEL_EXCEPTION_

@@ -25,6 +25,7 @@ class Conta : public IConta{
     virtual void definirLimite();
 
     virtual void sacar(double valor);
+    virtual void sacarException(double valor);
     virtual void depositar(double valor);
 
   private:

@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Conta.h"
+#include "SaldoNaoDisponivelException.h"
 
 Conta::Conta(){
   this->nomeCliente = "";
@@ -20,6 +21,12 @@ Conta::~Conta(){}
 void Conta::sacar(double valor){
   if(valor > this->getSaldo()){
     std::cout << "Voce nao pode sacar um valor maior que o seu saldo." << std::endl;
+  }
+  this->setSaldo(this->getSaldo() - valor);
+}
+void Conta::sacarException(double valor){
+  if(valor > this->getSaldo()){
+    throw SaldoNaoDisponivelException();
   }
   this->setSaldo(this->getSaldo() - valor);
 }
